@@ -1,0 +1,13 @@
+---
+ - name: Install and Configure
+   hosts: webserver1
+   gather_facts: false
+   become: yes
+   tasks:
+      - name: Updating repos
+        yum:
+          name: "*"
+          state: latest
+      - name: Installing required java
+        yum:
+          name: java-1.8.0-openjdk
