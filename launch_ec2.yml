@@ -1,0 +1,10 @@
+---
+ - name: Launch ec2 instance
+ hosts: localhost 
+ connection: local
+ gather_facts: false
+ tasks:
+   - name: Simple task to launch ec2 instance with default values
+     ec2:
+       instance_type: t2.micro
+       image: ami-0323c3dd2da7fb37d
