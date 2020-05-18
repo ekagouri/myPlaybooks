@@ -1,0 +1,7 @@
+---
+ - name: Pull centos image
+   hosts: 172.31.81.227
+   tasks:
+   - name: Pull
+     docker_image:
+       name: centos
